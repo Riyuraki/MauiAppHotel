@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+        <Label Text="Sobre" 
+               FontFamily="IndieFlower"
+               FontSize="50"
+               TextColor="{StaticResource Black}"
+               VerticalOptions="Start"/>
+
+        <Label Text="Desenvolvedor: Marcelo Miyazaki" 
+               FontFamily="IndieFlower"
+               FontSize="25"
+               TextColor="{StaticResource Black}"/>
+        <Label Text="2024" 
+               FontFamily="IndieFlower"
+               FontSize="25"
+               TextColor="{StaticResource Black}"/>
+    </VerticalStackLayout>
+</ContentPage>
