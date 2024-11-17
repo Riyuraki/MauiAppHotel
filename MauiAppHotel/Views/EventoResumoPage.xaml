@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.EventoResumoPage"
+             Title="Resumo do Evento">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="{Binding Nome}"
+               FontSize="Large"
+               HorizontalTextAlignment="Center"
+               TextColor="{StaticResource MidnightBlue}"/>
+
+        <Frame Padding="10">
+            <StackLayout Orientation="Horizontal" >
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="Informações do Evento"
+                           FontSize="Medium"
+                           TextColor="{StaticResource MidnightBlue}"/>
+
+                    <Label Text="Local: "/>
+                    <Label Text="{Binding Local}"
+                           TextColor="{StaticResource MidnightBlue}"/>
+
+                    <Label Text="Data de Inicio: "/>
+                    <Label Text="{Binding DataInicio, StringFormat='{0:dd/MM/yyyy}'}"
+                           TextColor="{StaticResource MidnightBlue}"/>
+
+                    <Label Text="Data de Término: "/>
+                    <Label Text="{Binding DatadeTermino, StringFormat='{0:dd/MM/yyyy}'}"
+                           TextColor="{StaticResource MidnightBlue}"/>
+
+                    <Label Text="Duração: "/>
+                    <Label Text="{Binding DuracaoEmDias}"
+                           TextColor="{StaticResource MidnightBlue}"/>
+                    <Label Text="dias"/>
+
+                    <Label Text="Número de Participante: "/>
+                    <Label Text="{Binding NumeroParticipantes}"
+                           TextColor="{StaticResource MidnightBlue}"/>
+
+                    <Label Text="Custo por Participante: "/>
+                    <Label Text="{Binding CustoPorParticipantes, StringFormat='{0:c}'}"
+                           TextColor="{StaticResource MidnightBlue}"/>
+
+                    <Label Text="Custo Total: "/>
+                    <Label Text="{Binding CustoTotal, StringFormat='{0:c}'}"
+                           TextColor="{StaticResource MidnightBlue}"/>
+
+                </HorizontalStackLayout>
+            </StackLayout>
+
+        </Frame>
+
+    </VerticalStackLayout>
+
+</ContentPage>
+
+    

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.CadastroEventoPage"
+             Title="Cadastro de Evento"
+             BackgroundColor="{StaticResource Gray100}">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        
+        <Label Text="Cadastro de Evento"
+               FontSize="Title"
+               HorizontalTextAlignment="Center"
+               TextColor="{StaticResource MidnightBlue}" />
+
+        
+        <Entry x:Name="entryNomeEvento" 
+               Placeholder="Nome do Evento"
+               Text="{Binding Evento.Nome}" />
+
+        
+        <DatePicker x:Name="dpDataInicio"
+                    Date="{Binding Evento.DataInicio}"
+                    MinimumDate="{Binding Hoje}"
+                    DateSelected="OnDataInicioSelected"/>
+
+        
+        <DatePicker x:Name="dpDataTermino"
+                    Date="{Binding Evento.DataTermino}" 
+                    MinimumDate="{Binding Evento.DataInicio.AddDay(1)}"/>
+
+        
+        <Stepper x:Name="stpNumeroParticipantes"
+                 Minimum="1"
+                 Maximum="1000"
+                 Increment="1"
+                 Value="{Binding Evento.NumeroParticipantes}" />
+
+       
+        <Entry x:Name="entryLocal"
+               Placeholder="Local do Evento"
+               Text="{Binding Evento.Local}" />
+
+        
+        <Entry x:Name="entryCustoPorParticipante"
+               Placeholder="Custo por Participante"
+               Keyboard="Numeric"
+               Text="{Binding Evento.CustoPorParticipante}" />
+
+        
+        <Button Text="Cadastrar Evento"
+                HorizontalOptions="Center"
+                Clicked="OnCadastrarEventoClicked" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

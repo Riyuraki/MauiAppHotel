@@ -67,13 +67,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\CadastroEventoPage.xaml.cs">
+	    <DependentUpon>CadastroEventoPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\EventoResumoPage.xaml.cs">
+	    <DependentUpon>EventoResumoPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\ContratacaoHospedagem.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HospedagemContratada.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Sobre.xaml">
+	  <MauiXaml Update="Views\CadastroEventoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EventoResumoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
