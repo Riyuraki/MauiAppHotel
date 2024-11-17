@@ -12,7 +12,7 @@
         <Label Text="Cálculo da Diária" 
                FontFamily="IndieFlower"
                FontSize="50"
-               TextColor="{StaticResource Primary}"/>
+               TextColor="{StaticResource MidnightBlue}"/>
 
         <Frame Padding="10">
             <VerticalStackLayout>
@@ -23,7 +23,7 @@
                            Text="Adultos" />
 
                     <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="{StaticResource MidnightBlue}"
                            Text="{Binding Value}" 
                            BindingContext="{x:Reference stp_adultos}"/>
 
@@ -37,7 +37,7 @@
                             Text="Crianças" />
 
                     <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="{StaticResource MidnightBlue}"
                            Text="{Binding Value}" 
                            BindingContext="{x:Reference stp_criancas}"/>
 
@@ -51,7 +51,8 @@
                 <Label Text="Escolha sua Suíte" />
 
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione sua Acomodação" />
+                        Title="Selecione sua Acomodação" 
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
                        Margin="10">
@@ -61,6 +62,7 @@
                         <HorizontalStackLayout>
                             <Label Text="Check-in" />
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
@@ -74,7 +76,7 @@
                     
                 </Frame>
 
-                <Button Text="Avançar" />
+                <Button Text="Avançar" Clicked="Button_Clicked" />
 
             </VerticalStackLayout>
         </Frame>
